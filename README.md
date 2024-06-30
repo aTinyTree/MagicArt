@@ -3,7 +3,7 @@ Magic the Gathering card/art search engine
 
 ***
 Overview  
-I am planning on making a search engine for the 29000~ unique Magic Cards that mostly focuses on showcase the art and artists of this 30 year old game. Searching for a card name specifically or searching for specific attributes pertaining to a card itself ie color, cost, set. Searching for an Artist will bring up a gallery of all associated art they've produced for the game. Searching for a card will let you click on the artist of that card to see what else they've done without having to have known the artist beforehand. There will be an advanced search feature to narrow down your search if you aren't sure of the name of a card or artist, but know some other attributes that a card has, like what type or color. 
+I am planning on making a search engine for the 29000~ unique Magic Cards that mostly focuses on showcasing the art and artists of this 30 year old game. Searching for a card name specifically or searching for specific attributes pertaining to a card itself ie color, cost, set. Searching for an Artist will bring up a gallery of all associated art they've produced for the game. Searching for a card will let you click on the artist of that card to see what else they've done without having to have known the artist beforehand. There will be an advanced search feature to narrow down your search if you aren't sure of the name of a card or artist, but know some other attributes that a card has, like what type or color. 
 
 ***
 Technical Insight  
