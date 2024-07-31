@@ -5,7 +5,7 @@
 }
 
 .search-bar-container {
-    padding-top: 30vh;
+    padding-top: 25vh;
     width: 100%;
     margin: auto;
     display: flex;
@@ -17,4 +17,11 @@
     display: flex;
     justify-content: center;
     padding-top: 10vh;
+    color: aliceblue;
+    font-style:italic;
+    font-size:4rem;
+}
+
+.searched-bar {
+    display:none;
 }

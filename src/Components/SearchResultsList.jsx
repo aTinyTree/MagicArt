@@ -4,9 +4,7 @@ import "./SearchBar.jsx";
 
 import React, { Children } from "react";
 
-export const SearchResulstsList = ({ results }) => {
-    // const [State, setState] = useState([])
-
+export const SearchResultsList = ({ results }) => {
     return (
         <div className="resultslist" id="resultslist">
             {results.map((result, id) => {
@@ -17,7 +15,6 @@ export const SearchResulstsList = ({ results }) => {
                         id="suggestion"
                         onClick={(e) => {
                             document.getElementById("searchbar").value = result;
-                            // removelist();
                         }}
                     >
                         {result}
@@ -27,6 +24,3 @@ export const SearchResulstsList = ({ results }) => {
         </div>
     );
 };
- const removelist = () => {
-    document.getElementById("resultslist").replaceChildren("")
- }

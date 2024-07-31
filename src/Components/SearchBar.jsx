@@ -41,7 +41,7 @@ export const SearchBar = ({ setResults }) => {
                 onChange={(e) => handleChange(e.target.value)}
                 onSubmit={console.log({input})}
             />
-            <button></button>
+            <button className="searchbutton"></button>
         </div>
         
     );
