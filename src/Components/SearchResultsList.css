@@ -1,0 +1,11 @@
+.resultslist{
+    overflow-y: scroll;
+    max-height: 400px;
+    width: 30%;
+    background-color: white;
+    border-bottom-left-radius: 3px;
+    font-size: 1.25rem;
+}
+.suggestion:hover{
+    background-color: gray;
+}
