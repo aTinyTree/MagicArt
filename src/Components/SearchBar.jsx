@@ -1,7 +1,7 @@
 import "./SearchBar.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
-export const SearchBar = ({ setResults }) => {
+export const SearchBar = ({ setResults, selectedItem }) => {
     const [input, setInput] = useState("");
     const fetchData = async (value) => {
         try {
@@ -13,25 +13,26 @@ export const SearchBar = ({ setResults }) => {
         } catch {
             setResults([]);
         }
-        // fetch(`https://api.scryfall.com/cards/search?q=${value}`)
-        //     .then((response) => response.json())
-        //     .then((json) => {
-        //         console.log(json)
-        //         setResults(json.data.map((card) => card.name));
-        //     });
     };
 
-// Change value to be searched and remove search if empty
+    useEffect(() => {
+        console.log("changed", selectedItem);
+        setInput(selectedItem);
+    }, [selectedItem]);
+
+    // Change value to be searched and remove search if empty
 
     const handleChange = (value) => {
         if (value !== "") {
             fetchData(value);
             // setResults([]);
-        }else{setResults([""])}
+        } else {
+            setResults([""]);
+        }
         setInput(value);
     };
 
-// search bar itself
+    // search bar itself
     return (
         <div className="input-wrapper">
             <input
@@ -39,10 +40,9 @@ export const SearchBar = ({ setResults }) => {
                 placeholder="Type to search..."
                 value={input}
                 onChange={(e) => handleChange(e.target.value)}
-                onSubmit={console.log({input})}
+                onSubmit={console.log({ input })}
             />
             <button className="searchbutton"></button>
         </div>
-        
     );
 };

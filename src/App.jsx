@@ -9,7 +9,9 @@ import {
 function App() {
     const [results, setResults] = useState([]);
     const [showList, setShowList] = useState(false);
+    const [selectedItem, setSelectedItem] = useState("");
     console.log(results);
+
     return (
         <div className="App">
             <div className="title">MagicArt :)</div>
@@ -19,14 +21,15 @@ function App() {
                         setShowList(true);
                         setResults(results);
                     }}
+                    selectedItem={selectedItem}
                 />
-                {/* <SearchBar setResults={setResults} /> */}
-                {/* <SearchResultsList id="searchresultslist" results={results}/> */}
                 {showList && (
                     <SearchResultsList
-                        id="searchresultslist"
                         results={results}
-                        onClick={(e) => setShowList(false)}
+                        setSelectedItem={(selectedItem) => {
+                            setSelectedItem(selectedItem);
+                            setShowList(false);
+                        }}
                     />
                 )}
 
