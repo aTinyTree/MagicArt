@@ -4,10 +4,11 @@ import "./SearchBar.jsx";
 import { useState } from "react";
 
 import React, { Children } from "react";
+import {
+    renderArt,
+} from "../App.jsx";
 
-export const SearchResultsList = ({ results, setSelectedItem }) => {
-    // const [selectedItem, setSelectedItem] = useState("");
-
+export const SearchResultsList = ({ results, setSelectedItem, setRenderArt }) => {
     return (
         <div className="resultslist" id="resultslist">
             {results.map((result, id) => {
@@ -18,9 +19,10 @@ export const SearchResultsList = ({ results, setSelectedItem }) => {
                         id="suggestion"
                         onClick={(e) => {
                             setSelectedItem(result);
+                            setRenderArt(true);
                         }}
                     >
-                        {result}
+                        {result.name}
                     </div>
                 );
             })}

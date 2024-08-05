@@ -25,3 +25,9 @@
 .searched-bar {
     display:none;
 }
+#cardArt{
+    height: 400px;
+    padding-left: 300px;
+    padding-top: 100px;
+    border-radius: 10px;
+}
