@@ -5,6 +5,7 @@ import {
     SearchBarResultsList,
     SearchResultsList,
 } from "./Components/SearchResultsList";
+import { CardInformation } from "./Components/CardInformation";
 import { render } from "@testing-library/react";
 
 function App() {
@@ -12,8 +13,21 @@ function App() {
     const [showList, setShowList] = useState(false);
     const [selectedItem, setSelectedItem] = useState("");
     const [renderArt, setRenderArt] = useState(false);
-    console.log(results);
+    const [toggle, setToggle] = useState(false);
 
+    console.log(results);
+    const showArt = () => {
+        console.log("inShowArt");
+        if (selectedItem.card.layout == "transform")
+            if (toggle)
+                return selectedItem.card.card_faces[1].image_uris.png;
+            else
+                return selectedItem.card.card_faces[0].image_uris.png;
+        else return selectedItem.card.image_uris.png;
+    };
+    const changeArt = () => {
+        if (selectedItem.card.layout == "transform") setToggle(!toggle);
+    };
     return (
         <div className="App">
             <div className="title">MagicArt :)</div>
@@ -36,8 +50,17 @@ function App() {
                     />
                 )}
             </div>
-            {renderArt && <img src={selectedItem.art} alt="art" id="cardArt" />}
-            <cardInformation/>
+            <div className="cardWrapper">
+                {renderArt && (
+                    <img
+                        src={showArt()}
+                        alt="art"
+                        id="cardArt"
+                        onClick={changeArt}
+                    />
+                )}
+                {renderArt && <CardInformation selectedItem={selectedItem} />}
+            </div>
         </div>
     );
 }

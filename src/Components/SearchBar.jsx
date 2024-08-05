@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 
 export const SearchBar = ({ setResults, selectedItem }) => {
     const [input, setInput] = useState("");
-    const fetchData = async (value) => {console.log("this is working")
+    const fetchData = async (value) => {
         try {
             const response = await fetch(
                 `https://api.scryfall.com/cards/search?q=${value}`
@@ -11,26 +11,20 @@ export const SearchBar = ({ setResults, selectedItem }) => {
             const json = await response.json();
             //TODO for double faced cards, use card.card_faces."0+1"
             const results= json.data.map((card) => {
-                console.log(card.name, card)
-                return { name: card.name, art: card.image_uris?.png };
+                return { name: card.name, art: card.image_uris?.png, card };
             })
-            console.log("this is it")
             // results = results.slice(0,10)
             setResults(
-                json.data.map((card) => {
-                    return { name: card.name, art: card.image_uris?.png };
-                })
+                results
             );
         } catch(error) {
             setResults([]);
-            console.log(error);
+            console.error(error);
         }
     };
 
     //listen for selected item change
     useEffect(() => {
-        console.log("changed", selectedItem);
-        console.log("changed");
         setInput(selectedItem.name);
     }, [selectedItem]);
 
@@ -54,7 +48,6 @@ export const SearchBar = ({ setResults, selectedItem }) => {
                 placeholder="Type to search..."
                 onChange={(e) => handleChange(e.target.value)}
                 value={input}
-                onSubmit={console.log({ input })}
             />
             <button className="searchbutton"></button>
         </div>

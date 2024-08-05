@@ -28,6 +28,10 @@
 #cardArt{
     height: 400px;
     padding-left: 300px;
-    padding-top: 100px;
     border-radius: 10px;
+}
+.cardWrapper{
+    display:flex;
+    flex-direction: row;
+    padding-top: 100px;
 }
