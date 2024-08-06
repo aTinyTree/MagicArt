@@ -14,8 +14,7 @@ function App() {
     const [selectedItem, setSelectedItem] = useState("");
     const [renderArt, setRenderArt] = useState(false);
     const [toggle, setToggle] = useState(false);
-
-    console.log(results);
+    
     const showArt = () => {
         console.log("inShowArt");
         if (selectedItem.card.layout == "transform")

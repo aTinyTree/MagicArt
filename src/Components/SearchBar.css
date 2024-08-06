@@ -16,9 +16,10 @@
     background-color: transparent;
     border: none;
     height: 100%;
-    font-size: 1.25rem;
     width: 100%;
     margin-left: 5px;
+    z-index: 3;
+    font-size: 1.25rem;
   }
   
   input:focus {
@@ -33,7 +34,7 @@
     height:1rem;
   }
   .move {
-    transition-duration: 5;
+    transition-duration: 1s;
     padding-top: 05vh;
     width: 100%;
     margin: auto;

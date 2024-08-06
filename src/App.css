@@ -1,5 +1,5 @@
 .App {
-    background-color: #757474;
+    background-color: #444343;
     width: 100vw;
     height: 100vh;
 }
@@ -12,14 +12,18 @@
     flex-direction: column;
     align-items: center;
     min-width: 200px;
+    position: relative;
 }
 .title {
     display: flex;
     justify-content: center;
-    padding-top: 10vh;
+    padding-top: 4vh;
     color: aliceblue;
     font-style:italic;
     font-size:4rem;
+    padding-bottom: 2vh;
+    background-color: rgba(16, 17, 104, 0.425);
+    box-shadow: 0 0 10px #000;
 }
 
 .searched-bar {
@@ -27,11 +31,15 @@
 }
 #cardArt{
     height: 400px;
-    padding-left: 300px;
     border-radius: 10px;
 }
 .cardWrapper{
-    display:flex;
+    display: flex;
     flex-direction: row;
     padding-top: 100px;
+    padding-left: 24vw;
+    position: relative;
+}
+#cardArt:hover{
+    box-shadow: 0px 0px 10px #ddd;
 }

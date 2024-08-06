@@ -1,4 +1,14 @@
 .cardInformation{
     color:black;
-    font-size: 4rem;
+    margin-left: 50px;
+    animation-delay: 3s;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+}
+.artist{
+    font-size: 15px;
+}
+.artistName{
+    font-size: 22px;
 }
