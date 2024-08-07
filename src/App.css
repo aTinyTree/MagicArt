@@ -32,12 +32,12 @@
 #cardArt{
     height: 400px;
     border-radius: 10px;
+    margin-left: 26vw;
 }
 .cardWrapper{
     display: flex;
     flex-direction: row;
     padding-top: 100px;
-    padding-left: 26vw;
     position: relative;
 }
 #cardArt:hover{

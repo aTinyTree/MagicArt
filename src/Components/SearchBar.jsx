@@ -1,12 +1,13 @@
 import "./SearchBar.css";
-import "./CardGallery.jsx"
+import "./CardGallery.jsx";
 import { useState, useEffect, useLayoutEffect } from "react";
 
 export const SearchBar = ({
     setResults,
     selectedItem,
     setGallery,
-    setRenderArt
+    setRenderArt,
+    setShowList,
 }) => {
     const [input, setInput] = useState("");
     const fetchData = async (value) => {
@@ -15,7 +16,10 @@ export const SearchBar = ({
                 `https://api.scryfall.com/cards/search?q=${value}`
             );
             const json = await response.json();
-            //TODO for double faced cards, use card.card_faces."0+1"
+            if (!json.data) {
+                setResults([]);
+                return;
+            }
             const results = json.data.map((card) => {
                 return { name: card.name, art: card.image_uris?.png, card };
             });
@@ -53,10 +57,21 @@ export const SearchBar = ({
                 onChange={(e) => handleChange(e.target.value)}
                 value={input}
                 onKeyDown={(e) => {
-                    if (e.key === "Enter") {setGallery(true)} {setRenderArt(false)};
+                    if (e.key === "Enter") {
+                        setGallery(true);
+                        setRenderArt(false);
+                        setShowList(false);
+                    }
                 }}
             />
-            <button className="searchbutton" onClick={(e) => setGallery}></button>
+            <button
+                className="searchbutton"
+                onClick={(e) => {
+                    setGallery(true);
+                    setRenderArt(false);
+                    setShowList(false);
+                }}
+            >Search!</button>
         </div>
     );
 };

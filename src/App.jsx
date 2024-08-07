@@ -16,7 +16,7 @@ function App() {
 
     const showArt = () => {
         console.log("inShowArt");
-        // setToggle(false);
+        //TODO uselayouteffect or useeffect to reset toggle to false on card change
         if (selectedItem.card.layout == "transform")
             if (toggle) return selectedItem.card.card_faces[1].image_uris.png;
             else return selectedItem.card.card_faces[0].image_uris.png;
@@ -41,6 +41,7 @@ function App() {
                     selectedItem={selectedItem}
                     setGallery={setGallery}
                     setRenderArt={setRenderArt}
+                    setShowList={setShowList}
                 />
                 {showList && (
                     <SearchResultsList
@@ -60,6 +61,8 @@ function App() {
                         setGallery={setGallery}
                         results={results}
                         setRenderArt={setRenderArt}
+                        setSelectedItem={setSelectedItem}
+                        setShowList={setShowList}
                     />
                 )}
                 {renderArt && (
