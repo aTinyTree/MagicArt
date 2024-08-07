@@ -1,14 +1,60 @@
-.cardInformation{
-    color:black;
-    margin-left: 50px;
+.cardInformation {
+    color: black;
+    margin-left: 150px;
     animation-delay: 3s;
     display: flex;
     flex-flow: column;
     justify-content: center;
+    align-items: center;
+    max-width: 300px;
 }
-.artist{
+.artist {
     font-size: 15px;
+    margin-bottom: 25px;
+    background-color: rgb(95, 95, 95);
+    border-radius: 10px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    border: solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: fit-content;
+    box-shadow: 2px 1px 5px rgb(95, 95, 95);
+    border-width: 1px;
 }
-.artistName{
+.artistName {
     font-size: 22px;
+    color: rgb(72, 142, 160);
+    border-top: solid black;
+    padding: 3px;
+}
+.cardText {
+    background-color: rgb(95, 95, 95);
+    border-radius: 10px;
+    padding: 0px;
+    border: solid rgb(50, 50, 50);
+    align-items: center;
+}
+.cardOracle {
+    border-top: solid black;
+    display: flex;
+    justify-content: center;
+    padding: 3px;
+}
+.cardName {
+    border-bottom: solid black;
+    padding: 3px;
+    display: flex;
+    justify-content: center;
+}
+.typeLine {
+    display: flex;
+    justify-content: center;
+    padding: 3px;
+}
+.cardPrice {
+    display: flex;
+    justify-content: center;
+    padding: 10px 3px 3px 3px;
 }

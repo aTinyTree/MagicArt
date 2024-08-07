@@ -4,11 +4,14 @@ import "./SearchBar.jsx";
 import { useState } from "react";
 
 import React, { Children } from "react";
-import {
-    renderArt,
-} from "../App.jsx";
+import { renderArt } from "../App.jsx";
 
-export const SearchResultsList = ({ results, setSelectedItem, setRenderArt }) => {
+export const SearchResultsList = ({
+    results,
+    setSelectedItem,
+    setRenderArt,
+    setGallery
+}) => {
     return (
         <div className="resultslist" id="resultslist">
             {results.map((result, id) => {
@@ -20,6 +23,7 @@ export const SearchResultsList = ({ results, setSelectedItem, setRenderArt }) =>
                         onClick={(e) => {
                             setSelectedItem(result);
                             setRenderArt(true);
+                            setGallery(false);
                         }}
                     >
                         {result.name}

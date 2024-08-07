@@ -13,17 +13,19 @@
   }
   
   input {
-    background-color: transparent;
+    background-color: white;
     border: none;
     height: 100%;
     width: 100%;
     margin-left: 5px;
     z-index: 3;
     font-size: 1.25rem;
+    padding: 0px;
   }
   
   input:focus {
     outline: none;
+    background-color: white;
   }
   
   #search-icon {
@@ -34,7 +36,7 @@
     height:1rem;
   }
   .move {
-    transition-duration: 1s;
+    transition-duration: .5s;
     padding-top: 05vh;
     width: 100%;
     margin: auto;
