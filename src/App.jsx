@@ -18,12 +18,12 @@ function App() {
         console.log("inShowArt");
         //TODO uselayouteffect or useeffect to reset toggle to false on card change
         if (selectedItem.card.layout == "transform")
-            if (toggle) return selectedItem.card.card_faces[1].image_uris.png;
-            else return selectedItem.card.card_faces[0].image_uris.png;
+            if (toggle) {return selectedItem.card.card_faces[1].image_uris.png;}
+            else {return selectedItem.card.card_faces[0].image_uris.png;}
         else if(selectedItem.card.layout == "modal_dfc")
-            if (toggle) return selectedItem.card.card_faces[1].image_uris.png;
-            else return selectedItem.card.card_faces[0].image_uris.png;
-        else return selectedItem.card.image_uris.png;
+            if (toggle) {return selectedItem.card.card_faces[1].image_uris.png;}
+            else {return selectedItem.card.card_faces[0].image_uris.png;}
+        else {return selectedItem.card.image_uris.png;}
     };
     const changeArt = () => {
         if (selectedItem.card.layout == "transform") setToggle(!toggle);
@@ -32,7 +32,7 @@ function App() {
     return (
         <div className="App">
             <div className="title">MagicArt :)</div>
-            <div className={renderArt ? "move" : "search-bar-container"}>
+            <div className={renderArt || gallery ? "move" : "search-bar-container"}>
                 <SearchBar
                     setResults={(results) => {
                         setShowList(true);

@@ -1,5 +1,5 @@
 .App {
-    background-color: #444343;
+    background-color: #403075;
     width: 100vw;
     height: 100vh;
 }
@@ -13,6 +13,7 @@
     align-items: center;
     min-width: 200px;
     position: relative;
+    transition: .5s;
 }
 .title {
     display: flex;
@@ -22,7 +23,7 @@
     font-style:italic;
     font-size:4rem;
     padding-bottom: 2vh;
-    background-color: rgba(16, 17, 104, 0.425);
+    background-color: #261758;
     box-shadow: 0 0 10px #000;
 }
 

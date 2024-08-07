@@ -43,6 +43,7 @@ export const SearchBar = ({
             fetchData(value);
         } else {
             setResults([]);
+            setGallery(false);
         }
         setInput(value);
     };
