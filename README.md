@@ -7,7 +7,7 @@ An application to search for MagicCards
 
 ## Project Screen Shot(s)
 
-
+![alt text](image-1.png)
 
 ## Installation and Setup Instructions
 
