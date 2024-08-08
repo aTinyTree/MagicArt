@@ -26,7 +26,7 @@ export const SearchResultsList = ({
                             setGallery(false);
                         }}
                     >
-                        {result.name}
+                        {result.card.name}
                     </div>
                 );
             })}

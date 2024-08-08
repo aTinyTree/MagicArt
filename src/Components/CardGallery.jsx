@@ -11,10 +11,16 @@ export const CardGallery = ({
 }) => {
     const showArt = (result) => {
         console.log("inShowArt", result);
-        if (result.card.layout == "transform")
+        if (
+            result.card.layout == "transform" ||
+            result.card.layout == "modal_dfc" ||
+            result.card.layout == "reversible_card" ||
+            result.card.layout == "double_faced_token" ||
+            result.card.layout == "art_series"
+        )
             return result.card.card_faces[0].image_uris.png;
-        else if (result.card.layout == "modal_dfc")
-            return result.card.card_faces[0].image_uris.png;
+        // else if (result.card.layout == "modal_dfc")
+        //     return result.card.card_faces[0].image_uris.png;
         else return result.card.image_uris.png;
     };
 

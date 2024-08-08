@@ -22,7 +22,7 @@ export const SearchBar = ({
                 return;
             }
             const results = json.data.map((card) => {
-                return { name: card.name, art: card.image_uris?.png, card };
+                return { card };
             });
             // results = results.slice(0,10)
             setResults(results);
@@ -74,7 +74,9 @@ export const SearchBar = ({
                     setRenderArt(false);
                     setShowList(false);
                 }}
-            ><img className="searchButtonIcon"src={logo}/></button>
+            >
+                <img className="searchButtonIcon" src={logo} />
+            </button>
         </div>
     );
 };
