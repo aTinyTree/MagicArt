@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/MagicArt/static/css/main.ca4cb12d.css",
-    "main.js": "/MagicArt/static/js/main.5b4e18da.js",
+    "main.js": "/MagicArt/static/js/main.48aac849.js",
     "static/js/453.dd53e008.chunk.js": "/MagicArt/static/js/453.dd53e008.chunk.js",
     "index.html": "/MagicArt/index.html",
     "main.ca4cb12d.css.map": "/MagicArt/static/css/main.ca4cb12d.css.map",
-    "main.5b4e18da.js.map": "/MagicArt/static/js/main.5b4e18da.js.map",
+    "main.48aac849.js.map": "/MagicArt/static/js/main.48aac849.js.map",
     "453.dd53e008.chunk.js.map": "/MagicArt/static/js/453.dd53e008.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.ca4cb12d.css",
-    "static/js/main.5b4e18da.js"
+    "static/js/main.48aac849.js"
   ]
 }
