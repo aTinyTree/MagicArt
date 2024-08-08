@@ -58,7 +58,7 @@ function App() {
     };
     return (
         <div className="App">
-            <div className="title">MagicArt :)</div>
+            <div className="title">MagicArt</div>
             <div
                 className={
                     renderArt || gallery ? "move" : "search-bar-container"
