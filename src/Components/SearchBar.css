@@ -45,3 +45,12 @@
     align-items: center;
     min-width: 200px;
   }
+  .searchButtonIcon{
+    max-width: 14px;
+    padding: 1px;
+  }
+  .searchbutton{
+    padding: 1px;
+    height: 22px;
+    border-radius: 10px;
+  }

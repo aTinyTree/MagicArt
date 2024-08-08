@@ -11,7 +11,7 @@
 .artist {
     font-size: 15px;
     margin-bottom: 25px;
-    background-color: rgb(95, 95, 95);
+    background-color: #887CAF;
     border-radius: 10px;
     padding-top: 3px;
     padding-bottom: 3px;
@@ -20,21 +20,23 @@
     flex-direction: column;
     align-items: center;
     max-width: fit-content;
-    box-shadow: 2px 1px 5px rgb(95, 95, 95);
+    box-shadow: 1px 1px 5px black;
     border-width: 1px;
 }
 .artistName {
     font-size: 22px;
-    color: rgb(72, 142, 160);
+    color: cyan;
     border-top: solid black;
     padding: 3px;
 }
 .cardText {
-    background-color: rgb(95, 95, 95);
+    background-color: #887CAF;
     border-radius: 10px;
     padding: 0px;
-    border: solid rgb(50, 50, 50);
+    border: solid black;
     align-items: center;
+    border-width: 1px;
+    box-shadow: 1px 1px 5px black;
 }
 .cardOracle {
     border-top: solid black;

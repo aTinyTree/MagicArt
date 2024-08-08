@@ -5,6 +5,7 @@ import { SearchResultsList } from "./Components/SearchResultsList";
 import { CardInformation } from "./Components/CardInformation";
 import { CardGallery } from "./Components/CardGallery";
 import { render } from "@testing-library/react";
+import logo from "./magnifying-glass-icon-256x256-kqku2d34.png"
 
 function App() {
     const [results, setResults] = useState([]);

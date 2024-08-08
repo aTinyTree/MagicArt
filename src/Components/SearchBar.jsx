@@ -1,6 +1,7 @@
 import "./SearchBar.css";
 import "./CardGallery.jsx";
 import { useState, useEffect, useLayoutEffect } from "react";
+import logo from "../magnifying-glass-icon-256x256-kqku2d34.png";
 
 export const SearchBar = ({
     setResults,
@@ -62,6 +63,7 @@ export const SearchBar = ({
                         setGallery(true);
                         setRenderArt(false);
                         setShowList(false);
+                        // if({input} == ""){setGallery(false)};
                     }
                 }}
             />
@@ -72,7 +74,7 @@ export const SearchBar = ({
                     setRenderArt(false);
                     setShowList(false);
                 }}
-            >Search!</button>
+            ><img className="searchButtonIcon"src={logo}/></button>
         </div>
     );
 };

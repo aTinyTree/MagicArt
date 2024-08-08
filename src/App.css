@@ -25,6 +25,7 @@
     padding-bottom: 2vh;
     background-color: #261758;
     box-shadow: 0 0 10px #000;
+    text-shadow: 2px 2px 5px #000;
 }
 
 .searched-bar {
