@@ -1,6 +1,5 @@
-## Project Name & Pitch
+## MagicArt
 
-MagicArt
 
 An application to search for MagicCards
 
