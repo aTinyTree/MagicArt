@@ -16,3 +16,4 @@ export const CardInformation = ({ selectedItem }) => {
         </div>
     );
 };
+//card art itself found in app.jsx

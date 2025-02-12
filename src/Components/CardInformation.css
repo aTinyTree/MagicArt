@@ -11,10 +11,9 @@
 .artist {
     font-size: 15px;
     margin-bottom: 25px;
-    background-color: #887CAF;
-    border-radius: 10px;
-    padding-top: 3px;
-    padding-bottom: 3px;
+    background-color: #858586;
+    border-radius: 7px;
+    padding: 3px 10px 3px 10px;
     border: solid black;
     display: flex;
     flex-direction: column;
@@ -25,13 +24,13 @@
 }
 .artistName {
     font-size: 22px;
-    color: cyan;
+    color: rgb(0, 255, 255);
     border-top: solid black;
-    padding: 3px;
+    /* padding: 3px, 100px, 3px, 100px; */
 }
 .cardText {
-    background-color: #887CAF;
-    border-radius: 10px;
+    background-color: #858586;
+    border-radius: 7px;
     padding: 0px;
     border: solid black;
     align-items: center;

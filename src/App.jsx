@@ -7,6 +7,11 @@ import { CardGallery } from "./Components/CardGallery";
 import { render } from "@testing-library/react";
 import logo from "./magnifying-glass-icon-256x256-kqku2d34.png";
 
+// TODO narrow cards shown ie 3 per row
+// TODO Change toggle to be its own function? (keeps cardback on repeated searches of the same card)
+// TODO Make battles Front turned 90degrees
+// TODO STYLE changes
+
 function App() {
     const [results, setResults] = useState([]);
     const [showList, setShowList] = useState(false);
@@ -19,11 +24,11 @@ function App() {
         console.log("inShowArt");
         //TODO uselayouteffect or useeffect to reset toggle to false on card change
         if (
-            selectedItem.card.layout == "transform" ||
-            selectedItem.card.layout == "modal_dfc" ||
-            selectedItem.card.layout == "reversible_card" ||
-            selectedItem.card.layout == "double_faced_token" ||
-            selectedItem.card.layout == "art_series"
+            selectedItem.card.layout === "transform" ||
+            selectedItem.card.layout === "modal_dfc" ||
+            selectedItem.card.layout === "reversible_card" ||
+            selectedItem.card.layout === "double_faced_token" ||
+            selectedItem.card.layout === "art_series"
         )
             if (toggle) {
                 if (selectedItem.card.card_faces == undefined)
@@ -41,9 +46,11 @@ function App() {
         //         return selectedItem.card.card_faces[0].image_uris.png;
         //     }
         else {
-            if (selectedItem.card.image_uris == undefined)
-                console.log(selectedItem.card.name, "hi");
+          if (selectedItem.card.image_uris == undefined)
+            console.log(selectedItem.card.name, "hi");
+          if (selectedItem.card.Type_Line == "Battle — Siege // Sorcery")
             return selectedItem.card.image_uris.png;
+          return selectedItem.card.image_uris.png;
         }
     };
     const changeArt = () => {
